@@ -104,7 +104,7 @@ const BarChart = () => {
         borderRadius="5px"
         boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
         h="auto"
-        // border="1px solid red"
+       
       >
         {chartData ? (
           <Bar data={chartData} options={options} />

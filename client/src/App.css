@@ -63,7 +63,6 @@
   }
   .project-bg {
     height: 10vh;
-    /* display: flex; */
     background-image: url("./Components/Assets/Project-Header-bg.svg");
     background-size: cover;
     background-position: center;
@@ -71,6 +70,10 @@
     width: 100%;
     margin-left: 0%;
     border-radius: 0rem 0rem 0rem 3rem;
-    
+    /* border: 1px solid red; */
+    position: fixed;
+    z-index: 1;
+    top: 0;
   }
+  
 }
