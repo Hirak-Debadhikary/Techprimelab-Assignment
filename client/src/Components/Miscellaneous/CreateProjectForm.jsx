@@ -38,7 +38,7 @@ const CreateProjectForm = () => {
     if (endDate < startDate) {
       toast({
         title: "Invalid Date Range",
-        description: "End date cannot be smaller than the start date.",
+        description: "End date should grater then the starting date",
         status: "error",
         duration: 9000,
         isClosable: true,
