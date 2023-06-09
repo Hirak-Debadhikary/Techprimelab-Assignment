@@ -12,7 +12,6 @@ import {
   Thead,
   Tr,
   useBreakpointValue,
-  useMediaQuery,
 } from "@chakra-ui/react";
 import Navbar from "../Miscellaneous/Navbar";
 import SearchByFilterAndSort from "../Miscellaneous/SearchByFilterAndSort";
@@ -23,8 +22,10 @@ import { Link } from "react-router-dom";
 import { FiLogOut } from "react-icons/fi";
 
 const ProjectListing = () => {
-  const [projects, setProjects] = useState([]); // State to store all projects
-  const [filteredProjects, setFilteredProjects] = useState([]); // State to store filtered projects
+  // State to store all projects
+  const [projects, setProjects] = useState([]);
+  // State to store filtered projects
+  const [filteredProjects, setFilteredProjects] = useState([]);
 
   useEffect(() => {
     // Fetch projects from the API
@@ -85,7 +86,8 @@ const ProjectListing = () => {
     const day = date.getDate().toString().padStart(2, "0");
     const year = date.getFullYear().toString().slice(-2);
 
-    return `${month}-${day}-${year}`; // Format the date as "Month-Day-Year"
+    // Format the date as "Month-Day-Year"
+    return `${month}-${day}-${year}`;
 
     // Button size for different breakpoints
   }

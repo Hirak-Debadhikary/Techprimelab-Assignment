@@ -42,7 +42,6 @@ const Dashboard = () => {
     console.log(allCount);
   }, [allCount]);
 
-  
   const isSmallScreen = useBreakpointValue({ base: true, md: false });
   const fontSize = useBreakpointValue({ base: "15px", md: "18px" });
   const headingFontSize = useBreakpointValue({ base: "18px", md: "3rem" });
@@ -385,7 +384,6 @@ const Dashboard = () => {
         )}
 
         {/* Chart.js */}
-
         <Box w={{ base: "100%", md: "40%" }} mt="1rem" padding="1rem">
           <Text
             mb="1rem"

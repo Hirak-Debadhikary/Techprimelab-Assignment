@@ -10,6 +10,7 @@ import {
   Text,
   useBreakpointValue,
   Flex,
+  useToast,
 } from "@chakra-ui/react";
 import axios from "axios";
 
@@ -25,12 +26,26 @@ const CreateProjectForm = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [location, setLocation] = useState("");
-
   const status = "Registered"; // Constant field
+
+  const toast = useToast();
 
   // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    // Check if the end date is smaller than the start date
+    if (endDate < startDate) {
+      toast({
+        title: "Invalid Date Range",
+        description: "End date cannot be smaller than the start date.",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+        position: "top",
+      });
+      return; // Stop form submission
+    }
 
     let formData = {
       projectName,
@@ -57,6 +72,14 @@ const CreateProjectForm = () => {
         formData
       );
       console.log(response.data.message);
+      toast({
+        title: "Project Created.",
+        description: "We've created your project",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+        position: "top",
+      });
     } catch (error) {
       console.error("An error occurred while submitting form data:", error);
     }
@@ -289,8 +312,6 @@ const CreateProjectForm = () => {
             </Flex>
           ),
         })}
-
-        {/*  */}
       </Box>
     </>
   );

@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 
-// Import ChartJS library
 import {
-  Chart as ChartJS,
+  Chart,
   BarElement,
-  LinearScale,
   CategoryScale,
+  LinearScale,
+  Tooltip,
+  Legend,
 } from "chart.js";
 
 import { Bar } from "react-chartjs-2"; // Import Bar component from react-chartjs-2 library
 import { Box } from "@chakra-ui/react"; // Import Box component from Chakra UI library
 import axios from "axios"; // Import axios for making HTTP requests
-ChartJS.register(LinearScale, CategoryScale, BarElement); // Register required ChartJS components
+Chart.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const BarChart = () => {
   // Generates a random color
@@ -81,6 +82,7 @@ const BarChart = () => {
           },
         ],
       };
+
       // Update the chart data state
       setChartData(data);
     } catch (error) {
@@ -104,7 +106,6 @@ const BarChart = () => {
         borderRadius="5px"
         boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
         h="auto"
-       
       >
         {chartData ? (
           <Bar data={chartData} options={options} />
