@@ -3,6 +3,13 @@
 # Full-Stack-Aplication - 
 Welcome to the project repository for Full-Stack-Application. This project aims to provide a comprehensive web application for managing projects and their associated data. The application offers various features and functionalities, outlined below:
 
+# Tech Stack - 
+   # Front end - React.js and Chakra-Ui
+
+   # Backend - Node.js, Express.js
+
+   # Database - MongoDB.
+
 # Features - 
 # 1. Login Page -
 The login page allows users to securely authenticate themselves and gain access to the system. Users can enter below credentials and log in to the application.
