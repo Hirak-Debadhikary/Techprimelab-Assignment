@@ -4,11 +4,11 @@
 Welcome to the project repository for Full-Stack-Application. This project aims to provide a comprehensive web application for managing projects and their associated data. The application offers various features and functionalities, outlined below:
 
 # Tech Stack - 
-   # Front end - React.js and Chakra-Ui
+   Front end - React.js and Chakra-Ui
 
-   # Backend - Node.js, Express.js
+   Backend - Node.js, Express.js
 
-   # Database - MongoDB.
+   Database - MongoDB.
 
 # Features - 
 # 1. Login Page -
