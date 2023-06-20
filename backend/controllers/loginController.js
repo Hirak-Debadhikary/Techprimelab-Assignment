@@ -13,9 +13,9 @@ router.post("/login", async (req, res) => {
       .findOne({ email });
 
     // If the user doesn't exist, return an error
-    if (!user) {
-      return res.status(404).json({ error: "Enter your email and password" });
-    }
+    // if (!user) {
+    //   return res.status(404).json({ error: "Enter your email and password" });
+    // }
     // If the password not match return an error
     if (password !== user.password) {
       return res.status(401).json({ error: "Invalid credential" });
@@ -23,7 +23,8 @@ router.post("/login", async (req, res) => {
     // Else send the Success message
     res.status(200).json({ message: "Login Successfully" });
   } catch (error) {
-    res.status(500).json({ error: "Error occurred during login" });
+    // res.status(500).json({ error: "Error occurred during login" });
+    console.log("Error occurred during login");
   }
 });
 module.exports = router;
