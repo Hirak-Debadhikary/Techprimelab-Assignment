@@ -12,10 +12,6 @@ router.post("/login", async (req, res) => {
       .collection("userData")
       .findOne({ email });
 
-    // If the user doesn't exist, return an error
-    // if (!user) {
-    //   return res.status(404).json({ error: "Enter your email and password" });
-    // }
     // If the password not match return an error
     if (password !== user.password) {
       return res.status(401).json({ error: "Invalid credential" });
