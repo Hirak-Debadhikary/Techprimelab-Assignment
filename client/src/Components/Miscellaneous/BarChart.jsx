@@ -37,7 +37,7 @@ const BarChart = () => {
     try {
       // Fetch data from API endpoint
       const response = await axios.get(
-        "https://perfect-skirt-toad.cyclic.app/api/status/chart"
+        "http://localhost:2700/api/status/chart"
       );
 
       // Destructure response data

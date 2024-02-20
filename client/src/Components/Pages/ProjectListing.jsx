@@ -32,7 +32,7 @@ const ProjectListing = () => {
     const fetchProjects = async () => {
       try {
         const response = await axios.get(
-          "https://perfect-skirt-toad.cyclic.app/api/getAll"
+          "http://localhost:2700/api/getAll"
         );
         setProjects(response.data); // Set the projects state with the fetched data
         setFilteredProjects(response.data); // Initialize filtered projects with all projects
@@ -48,7 +48,7 @@ const ProjectListing = () => {
     try {
       // Update the status of the project in the API
       await axios.put(
-        `https://perfect-skirt-toad.cyclic.app/api/projects/${projectId}/status`,
+        `http://localhost:2700/api/projects/${projectId}/status`,
         {
           status: status,
         }

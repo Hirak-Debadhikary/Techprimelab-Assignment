@@ -25,7 +25,7 @@ const Dashboard = () => {
     const fetchAllCount = async () => {
       try {
         const response = await axios.get(
-          "https://perfect-skirt-toad.cyclic.app/api/status/count"
+          "http://localhost:2700/api/status/count"
         );
         // Update the state with the fetched count
         setAllCount({ allCount, ...response.data });

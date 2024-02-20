@@ -68,7 +68,7 @@ const CreateProjectForm = () => {
   const submitFormData = async (formData) => {
     try {
       const response = await axios.post(
-        "https://perfect-skirt-toad.cyclic.app/api/submit",
+        "http://localhost:2700/api/submit",
         formData
       );
       console.log(response.data.message);

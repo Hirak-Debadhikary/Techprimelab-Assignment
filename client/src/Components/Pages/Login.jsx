@@ -41,9 +41,9 @@ const Login = () => {
       // Set password validation error if password is empty
       setPasswordError("Password is required");
     }
-
+    
     try {
-      const response = await axios.post("https://perfect-skirt-toad.cyclic.app/api/login", {
+      const response = await axios.post("http://localhost:2700/api/login", {
         email,
         password,
       });
